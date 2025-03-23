@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>streamxcrick</title>
+    <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    #container {
+        background-color: black;
+    }
+
+    #telegramButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 378px;
+        height: 50px;
+        background: linear-gradient(90deg, darkblue, #001f3f);
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        animation: flowAnimation 2s infinite;
+    }
+
+    @keyframes flowAnimation {
+        0% {
+            background-position: -200px 0;
+        }
+
+        100% {
+            background-position: 200px 0;
+        }
+    }
+
+    #telegramButton:hover {
+        animation: none;
+        /* Pause animation on hover */
+        background: linear-gradient(90deg, #001f3f, darkblue);
+        /* Reverse colors on hover */
+    }
+</style>
+
+<body>
+    <div id="video"></div>
+
+    <script type="text/javascript">
+        jwplayer("video").setup({
+            width: "100%",
+            height: "100%",
+            autostart: true,
+            mute: false,
+            file: "https://v18tataplaysyndication.akamaized.net/bpk-tv/Sports18_1_HD_voot_MOB/output03/index.m3u8?hdnea=exp=1742733220~acl=/*~hmac=8a915461ca7185c35a320d7708e6f1c1eb5494f24a7d4bdd7ed85fd41353d0f6"
+        });
+    </script>
+    <script>
+        if (confirm("Join Our Telegram Channel")) { window.location.href = "https://telegram.me/tushar_stream" }
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I' || (e.shiftKey && e.key === 'I'))) {
+                e.preventDefault();
+            }
+        });
+
+    </script>
+    <div id="telegramButton" onclick="redirectToTelegram()">
+        Join Telegram
+    </div>
+    <script>
+        function redirectToTelegram() {
+            // Your redirect code here
+            window.location.href = 'https://telegram.me/tushar_stream';
+        }
+    </script>
+</body>
+
+</html>
